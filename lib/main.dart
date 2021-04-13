@@ -2,6 +2,7 @@ import 'package:boilerplate_flutter/providers.dart';
 import 'package:boilerplate_flutter/routes.dart';
 import 'package:boilerplate_flutter/ui/screens/main_screen.dart';
 import 'package:boilerplate_flutter/ui/shared/app_color.dart';
+import 'package:boilerplate_flutter/ui/shared/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,11 +18,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          scaffoldBackgroundColor: AppColor.scaffold
-        ),
+        theme: AppTheme.themeLight,
         routes: Routes.routes,
         home: MainScreen(),
       ),
